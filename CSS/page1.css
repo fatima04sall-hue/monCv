@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Couleur de fond générale */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.left {
+  background-color: #333; /* Première couleur */
+  color: #fff; /* Couleur du texte sur le fond foncé */
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right {
+  background-color: #f0f0f0; /* Deuxième couleur */
+  width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333; /* Couleur du texte du titre */
+}
+
+a {
+  color: #007bff; /* Couleur des liens (peut être ajustée) */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
