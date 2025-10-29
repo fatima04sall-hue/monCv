@@ -1,42 +1,82 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Couleur de fond générale */
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
+/* Conteneur principal avec flexbox */
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Deux colonnes côte à côte sur PC */
   min-height: 100vh;
 }
 
+/* Partie gauche */
 .left {
-  background-color: #333; /* Première couleur */
-  color: #fff; /* Couleur du texte sur le fond foncé */
+  background-color: #333;
+  color: #fff;
   width: 30%;
   padding: 20px;
   box-sizing: border-box;
 }
 
+/* Partie droite */
 .right {
-  background-color: #f0f0f0; /* Deuxième couleur */
+  background-color: #f0f0f0;
   width: 70%;
   padding: 20px;
   box-sizing: border-box;
 }
 
+/* Titre */
 header {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #333; /* Couleur du texte du titre */
+  color: #333;
 }
 
+/* Liens */
 a {
-  color: #007bff; /* Couleur des liens (peut être ajustée) */
+  color: #007bff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+/* 🟢 Partie responsive : pour écrans de moins de 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Empile la partie gauche et droite */
+  }
+
+  .left, .right {
+    width: 100%; /* Chaque section prend toute la largeur */
+  }
+
+  header {
+    text-align: center; /* Centre le titre sur mobile */
+    font-size: 1.6em;
+  }
+
+  .left {
+    text-align: center; /* Centre le contenu de gauche */
+  }
+}
+
+/* 🟣 Pour très petits écrans (moins de 480px, petits téléphones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Texte plus petit */
+  }
+
+  header {
+    font-size: 1.4em;
+  }
+
+  .left, .right {
+    padding: 15px;
+  }
 }
